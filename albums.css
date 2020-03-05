@@ -1,0 +1,653 @@
+/********** NAVIGATION **********/
+
+.header{
+    background-color: white;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f2f2f2;
+    color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+    list-style: none;
+}
+
+.sidebar ul li a{
+  padding: 8px 8px 8px 32px;
+  font-size: 20px;
+  color: black;
+    display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333333;
+  font-weight: 300;
+  text-transform: uppercase;
+    transition: all 0.5s;
+    float:left;
+}
+
+.sidebar ul li a:hover {
+    color: darksalmon;
+/*        font-size: 22px;*/
+}
+
+.sidebar ul li a.closebtn {
+    float: none;
+    font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+}
+/*
+
+openbtn:hover {
+  background-color: black;
+    color: white;
+}
+*/
+
+#main {
+  transition: margin-left .1s;
+  padding: 16px;
+}
+.sidebar ul li a{
+    float: left;
+}
+/*
+
+ On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) 
+*/
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.main{
+    height: 10%;
+}
+
+ul.visible_nav li a{
+  font-size: 18px;
+  color: black;
+    display: table-cell;
+  padding: 16px;
+  text-decoration: none;
+  color: #333333;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    float: right;
+    text-decoration: none;
+    list-style: none;
+    background-color: white;
+}
+
+ul.visible_nav li a:hover{
+    color: darksalmon;
+    transition: all 0.5s;
+}
+
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+  }
+}
+
+/*************************/
+
+
+
+
+
+/********* NAV TRY BAKCHODI **********/
+
+
+
+/***********************/
+
+/*^^^^^^^^^^^ FLIP BOX ^^^^^^^^^^^^^*/
+img 
+{
+ /*   box-shadow: 0 12px 16px 0 rgb(153, 153, 153), 0 17px 50px 0 rgb(153, 153, 153);*/
+    width:400px;
+    height:400px;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 350px;
+  height: 440px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: #0d0d0d;
+    padding: 15px;
+  color: white;
+       border:1px solid black;
+  transform: rotateY(180deg);
+}
+
+.checked {
+  color: orange;
+}
+
+
+/^^^^^^^^^^^^^^^^^^^^^^^^^^^/
+
+
+/*^^^^^^^^^^^ ADD TO CART BUTTON ^^^^^^^^^^^^^^^*/
+
+/* General Style */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+/* General button style (reset) */
+.button {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 8px;
+    display: inline-block;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    min-height:  height: 10px;
+    min-height:  width: 50px;
+}
+.button:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+
+
+/* Button 5 */
+.button-5 {
+    background: white;
+    color: black;
+    min-height: 10px;
+    min-width: 10px;
+    line-height: 4px;
+    font-size: 16px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 50%;
+}
+.button-5:active {
+    top: 0px;
+}
+.button-5 span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.3s;
+    -webkit-backface-visibility: hidden;
+    -moz-transition: all 0.3s;
+    -moz-backface-visibility: hidden;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+}
+.button-5>.fa {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    line-height: 2.5;
+    font-size: 180%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* Button 5b */
+.button-5b:hover span {
+    -webkit-transform: translateX(200%);
+    -moz-transform: translateX(200%);
+    -ms-transform: translateX(200%);
+    transform: translateX(200%);
+}
+.button-5b>.fa {
+    left: -100%;
+    top: 0;
+}
+.button-5b:hover>.fa {
+    left: 0;
+}
+
+/* Special trash effect */
+.trash-effect {
+    position: relative;
+    max-width: 320px;
+    margin: 60px auto 0;
+}
+.trash-effect .icon-file {
+    font-size: 30px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    margin: -45px 0 0 -25px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    -webkit-transform: translateX(90px) translateY(20px) scale(1);
+    -moz-transform: translateX(90px) translateY(20px) scale(1);
+    -ms-transform: translateX(90px) translateY(20px) scale(1);
+    transform: translateX(90px) translateY(20px) scale(1);
+}
+.trash-effect .icon-file:nth-child(2) {
+    -webkit-transform: translateX(140px) translateY(-10px) scale(1);
+    -moz-transform: translateX(140px) translateY(-10px) scale(1);
+    -ms-transform: translateX(140px) translateY(-10px) scale(1);
+    transform: translateX(140px) translateY(-10px) scale(1);
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+.trash-effect .icon-file:nth-child(3) {
+    -webkit-transform: translateX(140px) translateY(50px) scale(1);
+    -moz-transform: translateX(140px) translateY(50px) scale(1);
+    -ms-transform: translateX(140px) translateY(50px) scale(1);
+    transform: translateX(140px) translateY(50px) scale(1);
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.trash-effect.trash-effect-active .icon-file {
+    -webkit-transform: translateX(-100px) translateY(-10px) scale(0);
+    -moz-transform: translateX(-100px) translateY(-10px) scale(0);
+    -ms-transform: translateX(-100px) translateY(-10px) scale(0);
+    transform: translateX(-100px) translateY(-10px) scale(0);
+}
+@-webkit-keyframes openTrash {
+    50% {
+        -webkit-transform: rotate(-35deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+@-moz-keyframes openTrash {
+    50% {
+        -moz-transform: rotate(-35deg);
+    }
+    100% {
+        -moz-transform: rotate(0deg);
+    }
+}
+@keyframes openTrash {
+    50% {
+        transform: rotate(-35deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+
+
+
+
+
+/*************** FOOTER **********************/
+
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
+
+section
+{
+  text-align:center;
+}
+.footer #button{
+	width:35px;
+	height:35px;
+	border: #727172 12px solid;
+	border-radius:35px;
+	margin:0 auto;
+	position:relative;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.footer #button:hover{
+	width:35px;
+	height:35px;
+	border: #3A3A3A 12px solid;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	position:relative;
+}
+.footer {
+	bottom:0;
+	left:0;
+	position:fixed;
+    width: 100%;
+    height: 2em;
+    overflow:hidden;
+    margin:0 auto;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	z-index:999;
+}
+.footer:hover {
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	height: 10em;
+}
+.footer #container{
+	margin-top:5px;
+	width:100%;
+height:100%;
+  position:relative;
+  top:0;
+  left:0;
+	background: #3A3A3A;
+}
+.footer #cont{
+  position:relative;
+  top:-45px;
+  right:190px;
+	width:150px;
+	height:auto;
+	margin:0 auto;
+}
+.footer_center{
+	width:500px;
+	float:left;
+  text-align:center;
+}
+.footer h3{
+	font-family: 'Helvetica';
+	font-size: 30px;
+	font-weight: 100;
+	margin-top:70px;
+	margin-left:40px;
+}
+/^^^^^^^^^^^^^^^^^^^^^^^^^^^^/
+
+
+table tr td a.hover_img:hover{
+    opacity: 0.7;
+    transition: all 0.7s;
+}
+
+
+/******** ACTUAL FOOTER ********/
+
+.site-footer
+{
+  background-color:#f2f2f2;
+  font-size:15px;
+  line-height:124px;
+  color:black;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.4;
+  width: 70%;
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:black;
+  font-size:20px;
+  text-transform:uppercase;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373;
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#4d4d4d;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d;
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:white;
+  color:#ffffff;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:white;
+}
+.social-icons.size-sm a
+{
+  font-size:14px;
+align-content: center;
+    
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998;
+    transition: all 0.7s;
+    color:white;
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced;
+    transition: all 0.7s;
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6;
+    transition: all 0.7s;
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89;
+    transition: all 0.7s;
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:100;
+  }
+}
+
+table.row
+{
+    width: 70%;
+    max-height: inherit;
+    line-height: 32px;
+}
+
+th,td.now{ 
+width: 1150px; 
+    text-align: left;
+    font-weight:100px;
+}
+/************************/
+
+
+
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
