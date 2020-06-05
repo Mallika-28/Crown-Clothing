@@ -3,7 +3,6 @@
 .header{
     background-color: white;
 }
-
 .sidebar {
   height: 100%;
   width: 0;
@@ -52,7 +51,6 @@
   border: none;
 }
 /*
-
 openbtn:hover {
   background-color: black;
     color: white;
