@@ -12,7 +12,7 @@
     
     <body>
         <div class="container">
-            <div id="navbar" class="header" style="background-color: #4f7d7d;" >
+            <div id="navbar" class="header" >
                 
 <div id="mySidebar" class="sidebar">
     <ul style="list-style: none;">
@@ -27,25 +27,25 @@
 </div>
 
 <div class="main" >
-    <ul class="visible_nav" style="background-color: beige;">
-        <li class="openbtn" onclick="openNav()" style="list-style: none; float: left; color: white;background-color: #4f7d7d;" href="javascript:void(0)">☰ MENU</li> 
-        <li class="right" style="list-style:none;"><a href="#">SHOPPING BAG</a></li>
-        <li class="right" style="list-style:none;"><a href="#">FAVOURITES</a></li>
-        <li class="right" style="list-style:none;"><a href="#">LOG IN/SIGN UP</a></li>
+    <ul class="visible_nav">
+        <li class="openbtn" onclick="openNav()" style="list-style: none; float: left; background-color: #fcf4e9;" href="javascript:void(0)">☰ MENU</li> 
+        <li class="right" style="list-style:none; background-color: #fcf4e9;"><a href="#">SHOPPING BAG</a></li>
+        <li class="right" style="list-style:none; background-color: #fcf4e9;"><a href="#">FAVOURITES</a></li>
+        <li class="right" style="list-style:none; background-color: #fcf4e9;"><a href="#">LOG IN/SIGN UP</a></li>
     </ul>
 </div>
             </div>
-            <div class="container0" style="height: 210%; background-color: beige;">
+            <div class="container0" style="height: 180%; background-color:white;">
               <center>
          <div class="front">
             <div class="women">
                 <br><br><br>
                 <center>
-                    <table border="1px">
+                    <table>
             <div div="pi_op">
             <tr>
             <td class="image">
-                <img src="gigi_1.jpg" style="height: 615px; width: 604px">
+                <img src="used img/gigi_1.jpg" style="height: 615px; width: 604px">
                 </td>
                 
                 <td class="para_1">
@@ -70,7 +70,7 @@
                 </td>
                 
                 <td class="image">
-                    <img src="men_2.jpg"style="height: 610px; width: 610px">
+                    <img src="used img/men_2.jpg"style="height: 610px; width: 610px">
                 </td>
                         </tr>
                     </table>
@@ -88,13 +88,10 @@
         <script>
             // When the user scrolls the page, execute myFunction
             window.onscroll = function() {myFunction()};
-
             // Get the navbar
             var navbar = document.getElementById("navbar");
-
             // Get the offset position of the navbar
             var sticky = navbar.offsetTop;
-
             // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
             function myFunction() 
             {
@@ -133,7 +130,6 @@ function closeNav() {
 	  if (scroll > 300) {
 	    $(".black").css("background" , "blue");
 	  }
-
 	  else{
 		  $(".black").css("background" , "#333");  	
 	  }
@@ -153,11 +149,9 @@ function closeNav() {
                         <div class="text3"></div>
                         <center><img src="frontpic.jpg" style="height: 650px;width: 1050px;"></center>
                     </div>
-
                     <div class="mySlides fade">
                         <img src="background2.jpg" class="full" style="height: 650px;width: 1050px;">
                     </div>
-
                     <div class="mySlides fade">
                         <img src="background4.jpg" class="full" style="height: 650px;width: 1050px;">
                     </div>
@@ -193,7 +187,6 @@ function closeNav() {
         <script>
 var slideIndex = 0;
 showSlides();
-
 function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -415,5 +408,3 @@ function showSlides() {
         
     </body>
 </html>
-    
-        `
