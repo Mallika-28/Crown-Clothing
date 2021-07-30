@@ -8,11 +8,13 @@
 height: 100%;
 width: 0;
 position: fixed;
+  /*To overlap*/
 z-index: 1;
 top: 0;
 left: 0;
 background-color: #f2f2f2;
   color: black;
+  /*Where to clip */
 overflow-x: hidden;
 transition: 0.5s;
 padding-top: 60px;
