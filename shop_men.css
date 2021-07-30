@@ -530,6 +530,7 @@ html {
     justify-content: center;   
     height: 100%;
     background-color: $color2;
+	/*Controlling font smoothing*/
     -webkit-font-smoothing: antialiased;
     font-size: 18px;
 }
