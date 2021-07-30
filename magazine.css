@@ -138,6 +138,8 @@ ul.visible_nav li a:hover{
     transition: all 200ms ease-in;
     transform: scale(1);   
 }
+
+/*The transition-duration property specifies how many seconds (s) or milliseconds (ms) a transition effect takes to complete.*/
 .style_prevu_kit:hover
 {
     box-shadow: 0px 0px 10px #000000;
